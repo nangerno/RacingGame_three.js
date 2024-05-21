@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glaring Star</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jaini&family=Poetsen+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="status-box" id="distanceBoard">
+      <div class="status-row">
+        <span class="status-number">1 <sup>st</sup></span>
+        <div class="status-name" id="name1">Red</div>
+        <span class="status-score" id="distance1">0</span>
+      </div>
+      <div class="status-row">
+        <span class="status-number">2 <sup>st</sup></span>
+        <div class="status-name" id="name2">Blue</div>
+        <span class="status-score" id="distance2">0</span>
+      </div>
+      <div class="status-row">
+        <span class="status-number">3 <sup>st</sup></span>
+        <div class="status-name" id="name3">White</div>
+        <span class="status-score" id="distance3">0</span>
+      </div>
+    </div>
+    <div class="control-panel">
+      <div class="control-bar">
+        <div class="container">
+          <input
+            type="checkbox"
+            class="checkbox"
+            id="toggleDistanceBoard"
+            onclick="document.getElementById('distanceBoard').style.display = this.checked ?
+          'none' : 'flex';"
+          />
+          <label class="switch" for="toggleDistanceBoard">
+            <span class="slider"></span>
+          </label>
+        </div>
+        <span>Show Positions</span>
+      </div>
+    </div>
+    <canvas class="webgl"></canvas>
+    <script src="lib/effekseer.js"></script>
+    <script type="module" src="src/script.js"></script>
+  </body>
+</html>

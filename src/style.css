@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+.webgl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+}
+.status-box {
+  margin: 20px;
+  z-index: 999999;
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  border: 2px solid rgb(69, 190, 144);
+  border-radius: 10px;
+  position: relative;
+  padding: 20px;
+  row-gap: calc(10px);
+}
+.status-row {
+  color: white;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+}
+.status-row > span {
+  font-size: 30px;
+  font-style: italic;
+}
+.status-row > span > sup {
+  font-size: 15px;
+  font-style: italic;
+}
+.status-row .status-number {
+  font-family: "Poetsen One", sans-serif;
+  width: 10%;
+}
+.status-name {
+  font-family: "Jaini", system-ui;
+  letter-spacing: 7px;
+  width: 70%;
+  font-size: 25px;
+  padding-left: 10px;
+  margin-left: 10px;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: red;
+}
+.status-score {
+  font-family: "Poetsen One", sans-serif;
+  width: 10%;
+  font-size: 20px !important;
+  line-height: 30px;
+  font-style: italic;
+}
+
+/* Remove this container when use*/
+.component-title {
+  width: 100%;
+  position: absolute;
+  z-index: 999;
+  top: 30px;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #888;
+  text-align: center;
+}
+
+.control-panel {
+  user-select: none;
+  position: absolute;
+  bottom: 10px;
+  right: 30px;
+}
+.control-bar {
+  position: relative;
+  z-index: 99999;
+  gap: calc(10px);
+  display: flex;
+}
+.control-bar span {
+  color: white;
+  line-height: 20px;
+}
+
+/* The switch - the box around the slider */
+.container {
+  width: 30px;
+  height: 20px;
+  position: relative;
+}
+
+/* Hide default HTML checkbox */
+.checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.switch {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: #34c759;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+/* The slider */
+.slider {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: calc(50% - 10px / 2 + 5px);
+  top: calc(50% - 10px / 2);
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15), 0px 3px 1px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+
+.checkbox:checked + .switch {
+  background-color: #e9e9eb;
+}
+
+.checkbox:checked + .switch .slider {
+  left: calc(50% - 10px / 2 - 5px);
+  top: calc(50% - 10px / 2);
+}
